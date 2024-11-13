@@ -4,6 +4,12 @@
     $senha = $_POST['senha'];
     
     $codigo_sql = "SELECT * FROM teste WHERE usuario='$usuario' AND senha='$senha'";
-    $x =$conn->prepare($codigo_sql);
-    var_dump($x);
+
+    $sql_query = $conn -> query($codigo_sql);
+
+    $quantidade_linhas = $sql_query->num_rows;
+    
+    if ($quantidade_linhas == 1){
+        header('location: ../screens/painel.php');
+    }
 ?>

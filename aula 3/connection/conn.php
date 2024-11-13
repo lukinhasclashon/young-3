@@ -1,8 +1,10 @@
 <?php
     $servidor = 'localhost';
-    $banco_de_dados = 'ususarios';
+    $banco_de_dados = 'usuarios';
     $usuario = 'root';
     $senha = '';
 
-    $conn = new PDO("mysql:host=$servidor;dbname=$banco_de_dados", $usuario, $senha);
+    $conn = new mysqli($servidor, $usuario, $senha, $banco_de_dados);
+
+
 ?>
