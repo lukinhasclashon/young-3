@@ -6,13 +6,14 @@
     $cep = $_POST['cep'];
     $cpf = $_POST['cpf'];
 
-    $sql_codigo = "INSERT INTO clientes (nome, telefone, data, cpf, cep) VALUES ('$nome', '$telefone', '$data', '$cpf', $cep')";
-
+    $sql_codigo = "INSERT INTO clientes (nome, telefone, data_nascimento, cpf, cep) VALUES ('$nome', '$telefone', '$data', '$cpf', $cep')";
+   var_dump($sql_codigo);
     $resultado = $conn->query($sql_codigo);
-    if ($resultado == TRUE){
-        header('location: ../screens/index.php');
-    }
-    else{
-        header('location: ../screens/index.php?erro');
-    }
+    var_dump($resultado);
+    // if ($resultado == TRUE){
+    //     header('location: ../screens/index.php');
+    // }
+    // else{
+    //     header('location: ../screens/index.php?erro');
+    // }
 ?>

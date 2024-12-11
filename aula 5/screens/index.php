@@ -40,7 +40,20 @@
                 }
                 else{
                     foreach($informacoes as $item){
-                        var_dump($item);
+                        $id = $item[0];
+                        $nome = $item[1];
+                        $telefone = $item[2];
+                        $data = $item[3];
+                        $cpf = $item[4];
+                        $cep = $item[5];
+                        echo '<tr>
+                            <td> '.$nome.' </td>
+                            <td> '.$telefone.' </td>
+                            <td> '.$data.' </td>
+                            <td> '.$cpf.' </td>
+                            <td> '.$cep.' </td>
+                            <td><a href="formulario_editar.php">Editar?id='.$id.'</a> | <a href="">Deletar</a></td>
+                        </tr>';
                     }
                 }
             ?>
